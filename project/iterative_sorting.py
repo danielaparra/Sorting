@@ -4,12 +4,12 @@ def selection_sort( arr ):
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
-        # TO-DO: find next smallest element
+        # Find next smallest element
         for j in range(i, len(arr)):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
 
-        # TO-DO: swap
+        # Swap with current element
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
         #temp = arr[i]
         #arr[i] = arr[smallest_index]
@@ -20,7 +20,13 @@ def selection_sort( arr ):
 
 # TO-DO: implement the Insertion Sort function below
 def insertion_sort( arr ):
-
+    for i in range(1, len(arr) - 1):
+        temp = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] > temp: 
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = temp
     return arr
 
 
