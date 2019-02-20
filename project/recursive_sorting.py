@@ -51,7 +51,7 @@ def part(arr, low, high):
     
     for j in range(low, high): 
         if arr[j] <= pivot: 
-            i = i+1 
+            i =+ 1
             arr[i],arr[j] = arr[j],arr[i] 
         
     arr[i+1],arr[high] = arr[high],arr[i+1] 
@@ -60,7 +60,7 @@ def part(arr, low, high):
 # TO-DO: implement the Quick Sort function below USING RECURSION
 def quick_sort( arr, low, high ):
     if low < high:
-        p = part(arr,low,high)
+        p =  part(arr,low,high)
         
         quick_sort(arr, low, p-1)
         quick_sort(arr, p+1, high)
